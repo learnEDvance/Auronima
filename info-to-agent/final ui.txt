@@ -1,0 +1,310 @@
+# Auronima — Unified Fractal Object Space
+
+## Core Shift
+
+The system no longer treats the textbook as the only object capable of unfolding.
+
+Instead, every learning object may possess an internal structure that can be explored.
+
+Books remain the primary entry point into learning, but they are no longer unique in their ability to reveal deeper structure.
+
+Understanding emerges by exploring increasingly connected structures rather than navigating isolated documents.
+
+---
+
+# Universal Object Model
+
+Every learning object exists in one of two states:
+
+* Compressed
+* Expanded
+
+Objects transition naturally between these states during exploration.
+
+This interaction is universal.
+
+Every object may be explored regardless of its type.
+
+Examples include:
+
+* Book
+* Chapter
+* Selection
+* Concept
+* Video
+* PDF
+* Question
+* Experiment
+* Historical Story
+* Analogy
+* Research Resource
+
+The learner only needs to understand one interaction:
+
+**Expand an object to explore what exists within it.**
+
+---
+
+# Object-Specific Unfolding
+
+Although every object follows the same exploration principles, different objects reveal different kinds of internal structure.
+
+Books unfold into:
+
+* Pages
+* Selections
+
+Videos unfold into:
+
+* Timeline events
+* Timestamps
+
+PDFs unfold into:
+
+* Pages
+* Sections
+
+Experiments unfold into:
+
+* Procedure
+* Observations
+* Conclusions
+
+Questions unfold into:
+
+* Hints
+* Misconceptions
+* Solutions
+
+Concepts may unfold into:
+
+* Analogies
+* Prerequisites
+* Applications
+* Future abstractions
+
+Expansion is universal.
+
+The geometry revealed is unique to each object.
+
+No two object types are required to unfold identically.
+
+---
+
+# Fractal Exploration
+
+Exploration follows the same principles at every level.
+
+An expanded object may contain additional objects.
+
+Those objects may themselves expand.
+
+Each newly expanded object temporarily becomes the center of its own local exploration space.
+
+There is no distinction between "book exploration" and "object exploration."
+
+The same recursive interaction model applies everywhere.
+
+---
+
+# Progressive Unfolding
+
+Expansion does not necessarily reveal an object's complete internal structure.
+
+Objects unfold only as much as the current exploration requires.
+
+The primary textbook may unfold extensively because it serves as the foundation of exploration.
+
+Other objects often reveal only the portions relevant to the learner's current context.
+
+Additional structure appears naturally as understanding deepens.
+
+This prevents overwhelming the learner while preserving continuity.
+
+---
+
+# Continuous Environment
+
+There is only one continuous exploration environment.
+
+The learner never switches between separate worlds.
+
+Instead, exploration continuously shifts attention from one expanded object to another.
+
+Previously explored objects remain present whenever they are still relevant.
+
+Their representation changes naturally as exploration progresses.
+
+---
+
+# Dynamic Context
+
+At any moment, one expanded object becomes the active context.
+
+Its internal structure becomes the learner's immediate environment.
+
+Previously expanded objects remain part of the larger space.
+
+They simply become inactive until exploration returns to them.
+
+Understanding therefore grows continuously rather than through disconnected screens.
+
+---
+
+# Local Coordinate Systems
+
+Every expanded object establishes its own local coordinate system.
+
+Its internal progression defines a local temporal reference.
+
+Objects attached to one of its internal states inherit that state's position.
+
+They do not exist independently of it.
+
+For example:
+
+Video
+
+↓
+
+Timestamp
+
+↓
+
+Question
+
+↓
+
+Analogy
+
+↓
+
+Experiment
+
+If the learner moves to another timestamp, every object attached to that timestamp moves together with it while preserving their own internal relationships.
+
+This behavior applies recursively.
+
+Every expanded object temporarily becomes the origin of its own local exploration space.
+
+---
+
+# Relative Temporal Layers
+
+Every expanded object possesses its own progression.
+
+The currently active state always occupies:
+
+Z = 0
+
+States that have already occurred move toward negative Z.
+
+States that have not yet occurred move toward positive Z.
+
+Examples include:
+
+* Earlier timestamps within a video
+* Future timestamps
+* Previous document sections
+* Upcoming document sections
+* Earlier experiment stages
+* Future experiment stages
+
+Z therefore represents progression relative to the currently explored object.
+
+It is never a global coordinate.
+
+Each expanded object defines its own local temporal layers.
+
+---
+
+# Inherited Relationships
+
+Objects inherit the context of the state from which they emerge.
+
+Children remain attached to their parent's internal state rather than occupying independent positions.
+
+As the parent transitions through its progression, every descendant transitions with it.
+
+Entire branches therefore move together while preserving their own local organization.
+
+This creates stable, continuous exploration without requiring separate navigation systems.
+
+---
+
+# Persistent Exploration
+
+Objects that have already been explored remain available.
+
+If they remain relevant to the current context, they continue existing within the environment.
+
+Their representation may become compressed or inactive, but their exploration state is preserved.
+
+Nothing is recreated unnecessarily.
+
+The learner experiences continuity rather than repeatedly opening and closing disconnected views.
+
+---
+
+# Primary Learning Object
+
+Each exploration session begins from a primary learning object.
+
+In most cases, this is a textbook.
+
+Although every object may unfold, the primary textbook remains the visual and conceptual anchor of the exploration.
+
+Objects discovered farther from this origin gradually decrease in visual scale.
+
+Scale therefore communicates conceptual distance from the learner's starting point rather than importance.
+
+The learner always retains an intuitive sense of how far exploration has progressed from its foundation.
+
+---
+
+# Fractal Consistency
+
+Every expanded object temporarily behaves like a smaller version of the larger exploration space.
+
+It establishes:
+
+* its own progression
+* its own local context
+* its own relationships
+* its own internal exploration
+
+These same rules apply recursively at every level.
+
+Books unfold.
+
+Videos unfold.
+
+Concepts unfold.
+
+Experiments unfold.
+
+Questions unfold.
+
+Documents unfold.
+
+No object type requires a fundamentally different interaction model.
+
+The learner learns one exploration principle and applies it everywhere.
+
+---
+
+# Design Goal
+
+The interface should maintain a continuous exploratory experience.
+
+Learning should feel less like navigating software and more like uncovering structure that already exists.
+
+Objects reveal relationships.
+
+Relationships reveal further objects.
+
+Every expansion preserves context while opening new paths for exploration.
+
+Instead of moving between isolated views, the learner explores a single connected environment where every object may unfold into deeper structure without losing continuity or orientation.
+
+Understanding emerges naturally through connected exploration.

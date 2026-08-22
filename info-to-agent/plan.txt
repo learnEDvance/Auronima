@@ -1,0 +1,767 @@
+# Auronima — Fractal Knowledge Space
+
+## Overview
+
+Auronima is a spatial learning environment centered around textbooks.
+
+The system does not treat books as documents.
+
+Books are living spaces from which knowledge unfolds.
+
+Every textbook acts as the origin of an explorable universe where ideas exist as interconnected learning objects rather than pages in a file.
+
+Learning is experienced by exploring these spaces instead of navigating folders, menus, or hyperlinks.
+
+The textbook always remains the foundation of understanding.
+
+---
+
+# Core Philosophy
+
+Knowledge is understood through relationships.
+
+A learner should not feel as though they are browsing information.
+
+Instead, they should feel as though they are uncovering an already existing structure.
+
+Books are not destinations.
+
+They are origins.
+
+Every meaningful selection inside a book can become a learning object.
+
+Every learning object can reveal additional learning objects.
+
+Every discovery naturally leads to another.
+
+Nothing is presented all at once.
+
+Knowledge unfolds gradually through exploration.
+
+The learner should repeatedly experience the feeling:
+
+*"I discovered this."*
+
+rather than
+
+*"I opened another page."*
+
+---
+
+# Existing Technology Constraints
+
+The implementation remains intentionally lightweight.
+
+Current stack:
+
+* Vanilla HTML
+* Vanilla CSS
+* Vanilla JavaScript
+* Local Python server
+* Filesystem-based storage
+
+The system deliberately avoids:
+
+* React
+* Next.js
+* Databases
+* AI dependencies
+* Cloud infrastructure
+
+The architecture should remain:
+
+* modular
+* filesystem-driven
+* human-readable
+* manually curated
+* easy to extend
+
+---
+
+# Existing Book System
+
+The existing reading system remains unchanged.
+
+It already provides:
+
+* textbook manifests
+* page rendering
+* image-based pages
+* responsive scaling
+* normalized coordinate selections
+
+Reading mode remains exactly as it currently functions.
+
+Only after the learner selects a region does the textbook transition into object space.
+
+---
+
+# Learning Objects
+
+Everything inside object space revolves around **Guros**.
+
+A Guro represents a single learning object.
+
+Examples include:
+
+* Concept
+* Video
+* PDF
+* Question
+* Historical Story
+* Analogy
+* Experiment
+* Illustration
+* Image
+* Chapter
+* Book
+* Research Resource
+* Future Concept
+
+Existing Guro formats remain fully compatible.
+
+Current content structures require no modification.
+
+---
+
+# The Textbook
+
+The textbook is always the largest and most important object inside its own universe.
+
+Every learning object ultimately originates from a textbook.
+
+Whenever object space is entered, the textbook transforms into the central structure of that universe.
+
+Although reduced from reading size, it always remains visually dominant over every object that originates from it.
+
+No descendant object may become visually larger than its parent textbook.
+
+The textbook is the permanent visual anchor.
+
+---
+
+# Exploded Book Terrain
+
+The currently active textbook is never represented as a floating node.
+
+Instead, it becomes terrain.
+
+Its pages unfold into an explorable workspace.
+
+Every page remains fixed within the terrain.
+
+Selections remain attached to the pages from which they originated.
+
+The terrain forms the permanent foundation of exploration.
+
+Original pages never move.
+
+They always preserve their spatial arrangement.
+
+Temporary page copies may still be created when needed.
+
+Copies may:
+
+* move independently
+* participate in exploration
+* be repositioned freely
+
+The original terrain is never modified.
+
+---
+
+# Fractal Object Space
+
+Knowledge expands like a fractal.
+
+Every object can reveal additional objects.
+
+Every newly discovered object may itself become the origin of another expanding structure.
+
+As conceptual distance increases, objects gradually become smaller.
+
+This reduction in scale is intentional.
+
+Large structures remain readable from a distance.
+
+Fine details emerge naturally through zooming.
+
+The learner should never be overwhelmed by node density.
+
+Instead, the world continuously reveals additional detail as exploration continues.
+
+There is no practical limit to expansion.
+
+Object space is designed to support infinite growth while remaining visually understandable.
+
+---
+
+# Continuous Zoom
+
+Object space is fully zoomable.
+
+Zooming is the primary method for inspecting increasingly detailed structures.
+
+Objects farther from the textbook naturally become smaller as conceptual distance increases.
+
+This is not a limitation.
+
+It is a feature of the spatial model.
+
+Rather than enlarging distant objects, the learner simply zooms into them.
+
+The world behaves like a fractal landscape.
+
+Large structures remain visible from afar.
+
+Smaller structures reveal themselves only when explored closely.
+
+Exploration should feel like moving through an infinite world rather than switching between interface screens.
+
+---
+
+# Object Universes
+
+Every textbook exists inside its own independent Object Universe.
+
+An Object Universe contains:
+
+* the exploded book terrain
+* every page
+* every learning object
+* every thread
+* every discovered relationship
+* every local exploration
+
+Each universe is self-contained.
+
+Its exploration space extends infinitely across the X and Y directions.
+
+There is no fixed boundary.
+
+Opening another textbook does not expand the current universe.
+
+Instead, it transitions into the universe belonging to that textbook.
+
+Each textbook therefore becomes an independent region of the overall knowledge space.
+
+Although visually separated, all universes remain connected through their relationships.
+
+---
+
+# Spatial Coordinate System
+
+Object space uses three spatial axes.
+
+## X Axis
+
+Represents unrestricted horizontal space.
+
+Objects may be positioned freely wherever they best communicate their relationships.
+
+The layout engine should prioritize readability, thread clarity, and visual balance.
+
+---
+
+## Y Axis
+
+Represents unrestricted vertical space.
+
+Together, X and Y create the infinite exploration plane of the current textbook.
+
+Objects are no longer forced into a linear progression.
+
+They may spread naturally around the pages while preserving clear relationships.
+
+---
+
+## Z Axis
+
+The Z axis separates independent Object Universes.
+
+It does **not** represent conceptual distance.
+
+It does **not** represent educational progression.
+
+It does **not** represent time.
+
+Instead, it prevents different textbooks from occupying the same physical space.
+
+Transitioning along the Z axis means entering another textbook's universe.
+
+Each universe remains fully explorable while maintaining its own independent spatial layout.
+
+The learner should experience this as stepping into another connected world rather than moving deeper into the current one.
+# Entering Object Space
+
+Selecting a region inside a textbook initiates the transition into object space.
+
+The sequence is always consistent.
+
+1. Reading mode fades away.
+2. A black spatial canvas appears.
+3. The selected region becomes a learning object.
+4. The textbook unfolds into exploded terrain.
+5. A structural thread connects the selection to its originating page.
+6. Related learning objects become eligible for activation.
+
+The learner has not left the textbook.
+
+The textbook has expanded into an explorable universe.
+
+---
+
+# Book References
+
+Books are first-class learning objects.
+
+A book reference initially behaves like every other Guro.
+
+It appears as a normal object connected by threads to its parent.
+
+Its relationships remain visible.
+
+Its connections remain navigable.
+
+However, unlike other objects, a book node represents the entrance to another Object Universe.
+
+---
+
+# Opening a Referenced Book
+
+A referenced book is opened by double-clicking it.
+
+Opening a book does not replace the current universe.
+
+Instead, the camera transitions into the referenced book's Object Universe.
+
+The transition should feel continuous rather than abrupt.
+
+The newly entered universe immediately unfolds into exploded book terrain.
+
+Its pages become the new exploration surface.
+
+The referenced page automatically becomes the initial focus.
+
+From this point onward, exploration continues exactly as it would inside the original textbook.
+
+Every opened textbook behaves identically.
+
+No distinction exists between the first textbook and any subsequently opened textbook.
+
+Every textbook is capable of becoming a complete exploration universe.
+
+---
+
+# Returning to the Previous Universe
+
+Every opened textbook remembers the universe from which it was entered.
+
+Double-clicking any page belonging to the currently active textbook exits that universe.
+
+The learner returns to the previously active textbook.
+
+The previous camera position is restored.
+
+Previously explored objects remain exactly as they were left.
+
+Returning should feel like stepping back through a doorway rather than restarting navigation.
+
+Exploration is never lost.
+
+Context is always preserved.
+
+---
+
+# Exploration Continuity
+
+Moving between textbooks never interrupts the exploration thread.
+
+The learner may freely transition between connected books.
+
+Each textbook maintains:
+
+* its own page terrain
+* its own object layout
+* its own discovered objects
+* its own exploration history
+
+Returning to an earlier textbook restores that universe exactly as it was.
+
+Nothing is regenerated.
+
+Nothing is rearranged.
+
+Each universe remembers its own state throughout the learning session.
+
+---
+
+# Threads
+
+Every learning object remains connected to its parent through a thread.
+
+Threads represent structural relationships.
+
+They are never decorative.
+
+A thread communicates that one object emerged from another.
+
+Example
+
+Textbook
+
+↓
+
+Selection
+
+↓
+
+Concept
+
+↓
+
+Analogy
+
+↓
+
+Experiment
+
+↓
+
+Question
+
+Every object maintains exactly one structural parent.
+
+Additional relationships may exist, but lineage always remains visible.
+
+---
+
+# Cross-Book Threads
+
+Book references do not break structural relationships.
+
+When a referenced book is opened, the connecting thread continues across the universe transition.
+
+The learner should always be able to understand where the new universe originated.
+
+The connection between textbooks remains visible within the exploration graph, even though each textbook occupies its own independent Object Universe.
+
+Book transitions therefore preserve both spatial continuity and conceptual lineage.
+
+---
+
+# Event System
+
+Relationships are dynamic rather than static.
+
+Objects may respond to interaction through events.
+
+Opening one object may reveal another.
+
+Examples include:
+
+Concept opened
+
+↓
+
+Analogy becomes visible
+
+↓
+
+Video appears
+
+↓
+
+Question unlocks
+
+↓
+
+Future concept becomes available
+
+Events represent conceptual activation.
+
+They should reinforce understanding rather than function as navigation mechanics.
+
+Events may:
+
+* reveal previously hidden objects
+* animate structural threads
+* expose prerequisite concepts
+* introduce temporary helper objects
+* highlight important relationships
+
+Every event should strengthen the learner's mental model of the subject.
+
+---
+
+# Temporary Relation Objects
+
+Some ideas are best understood by briefly introducing an intermediate explanation.
+
+These explanations exist as temporary relation objects.
+
+Example
+
+Matter
+
+↓
+
+"Causes"
+
+↓
+
+Density
+
+The temporary relation object appears only while explaining the relationship.
+
+After the learner has observed the connection, it gradually disappears.
+
+The permanent structural thread remains.
+
+Temporary objects function as cognitive scaffolding.
+
+They clarify relationships without permanently increasing visual complexity.
+# Exploration Map
+
+The Exploration Map is not a miniature version of object space.
+
+It is not a world map.
+
+It is a record of the learner's understanding.
+
+The map visualizes only what has already been explored.
+
+Every visible node represents knowledge the learner has personally discovered.
+
+Nothing else is shown.
+
+The map grows alongside the learner.
+
+---
+
+# Progressive Discovery
+
+The Exploration Map never reveals the complete knowledge graph.
+
+Objects appear only after they have been encountered through exploration.
+
+Connections appear only after they have been discovered.
+
+Books appear only after they have been opened.
+
+Entire branches remain invisible until exploration naturally reaches them.
+
+Unknown knowledge does not appear as hidden or locked nodes.
+
+From the learner's perspective, it simply does not exist yet.
+
+This preserves curiosity and reinforces the feeling of genuine discovery.
+
+---
+
+# Map Structure
+
+The map is a conceptual graph rather than a spatial layout.
+
+It records:
+
+* discovered books
+* explored pages
+* discovered Guros
+* structural threads
+* cross-book references
+* activated relationships
+
+The physical positions of objects inside their Object Universes have no influence on the map layout.
+
+Instead, the graph is optimized for readability and relationship clarity.
+
+The map answers the question:
+
+*"How are these ideas connected?"*
+
+rather than
+
+*"Where are these objects located?"*
+
+---
+
+# Cross-Universe Navigation
+
+Although every textbook occupies its own independent Object Universe, all explored books remain connected inside the Exploration Map.
+
+A referenced textbook appears as a normal connected node.
+
+Its structural relationships remain intact.
+
+The learner may navigate between previously explored books directly through the map.
+
+The map therefore acts as a persistent network connecting every discovered universe.
+
+Physical exploration and conceptual navigation remain separate systems.
+
+---
+
+# Navigation
+
+Selecting a node on the Exploration Map transitions the learner directly to that object.
+
+If the object belongs to another textbook, the appropriate Object Universe is activated automatically.
+
+The learner arrives exactly where that object exists within its own universe.
+
+Exploration may then continue naturally from that point.
+
+The map never replaces spatial exploration.
+
+It simply allows the learner to revisit already discovered knowledge efficiently.
+
+---
+
+# Exploration Compass
+
+A permanent Exploration Compass remains visible throughout object space.
+
+Position:
+
+Bottom-right corner.
+
+The compass provides continuous orientation without interrupting exploration.
+
+It displays:
+
+* the active textbook
+* the current Object Universe
+* the learner's exploration path
+* the home textbook
+* overall orientation
+
+The compass represents conceptual context rather than physical coordinates.
+
+---
+
+# Home Direction Indicator
+
+The Exploration Compass continuously indicates the direction of the home textbook.
+
+Regardless of how many connected textbooks have been explored, the learner always knows where the original textbook is.
+
+The learner should never feel disoriented while exploring increasingly complex knowledge spaces.
+
+---
+
+# Rope Navigation
+
+The home textbook can project a structural rope through explored knowledge.
+
+The rope is activated by selecting the home textbook.
+
+It traces the learner's exploration history across every connected universe.
+
+The rope:
+
+* connects the learner to the home textbook
+* follows the exact exploration path
+* reinforces spatial memory
+* may be followed manually in either direction
+
+The rope is a guide.
+
+It is not teleportation.
+
+Returning home should feel like retracing one's understanding rather than pressing a back button.
+
+---
+
+# Exploration Radius
+
+The learner may optionally define an exploration radius.
+
+The radius limits how far new exploration may continue from the current path.
+
+Beyond the chosen radius:
+
+* previously discovered objects remain accessible
+* new discoveries pause
+* exploration may resume later by increasing the radius
+
+This provides a gentle way to manage extremely large knowledge spaces without restricting curiosity.
+
+---
+
+# Visual Style
+
+The interface should resemble a quiet universe rather than a software application.
+
+Background:
+
+Black.
+
+Mood:
+
+* calm
+* spacious
+* immersive
+* focused
+* contemplative
+
+Avoid:
+
+* dashboard aesthetics
+* crowded node clouds
+* productivity software styling
+* gamification
+* social media design
+
+Visual hierarchy should naturally emerge through scale, spacing, threads, and exploration.
+
+Nothing should compete with the learner's attention unnecessarily.
+
+---
+
+# Mental Model
+
+The learner begins inside a textbook.
+
+A meaningful region is selected.
+
+The textbook unfolds into an explorable universe.
+
+Pages become terrain.
+
+Selections become learning objects.
+
+Objects reveal new objects.
+
+Relationships appear as structural threads.
+
+Events gradually activate deeper understanding.
+
+Some discoveries lead to references in other textbooks.
+
+Opening one of those references transitions into another Object Universe, where an entirely new textbook unfolds into its own explorable terrain.
+
+Every textbook is therefore both a destination and the origin of another universe.
+
+The learner moves naturally between connected universes while building a continuously expanding network of understanding.
+
+The Exploration Map records only what has already been discovered.
+
+Unknown knowledge remains hidden until it is genuinely encountered.
+
+At every stage, the learner experiences knowledge as something uncovered rather than presented.
+
+The textbook never stops being the foundation.
+
+It simply continues to reveal the infinite structure that has always existed within it.
+# Returning to Reading Mode
+
+The original textbook remains the home of object space.
+
+When exploring the home textbook's Object Universe, double-clicking the textbook exits object space and restores reading mode at the exact reading position from which exploration began.
+
+When exploring a referenced textbook, the learner must first return to the previous Object Universe by double-clicking any page belonging to the currently active textbook.
+
+Only the home textbook may return directly to reading mode.
+
+This preserves the learner's mental model of moving between connected textbook universes while ensuring that reading context is never lost.

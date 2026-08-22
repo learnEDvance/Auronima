@@ -1,0 +1,371 @@
+# Auronima — Interaction Experience
+
+## Core Principle
+
+Auronima is built around a single idea:
+
+Learning should feel like uncovering an existing structure, where relations become tangible through interaction rather than software.
+
+The learner should rarely feel as though they are opening files, switching screens, or following hyperlinks.
+
+Instead, every interaction should create the feeling that understanding is gradually unfolding from something already present.
+
+The interface remains continuous throughout the entire experience.
+
+---
+
+# Beginning
+
+The learner begins inside a simple resource library.
+
+The library behaves like any familiar media browser.
+
+It contains books, PDFs, videos, and other learning resources.
+
+Nothing about the library is unusual.
+
+The complexity begins only after a resource is opened.
+
+---
+
+# Reading and Watching
+
+Opening a resource places it at the center of the workspace.
+
+Books and PDFs open in reading mode.
+
+Videos open in a standard media player.
+
+Initially, the learner experiences a familiar interface.
+
+There are no floating graphs or visible knowledge networks.
+
+The resource itself remains the primary focus.
+
+---
+
+# Progression
+
+Every resource possesses its own internal progression.
+
+Books and PDFs progress through pages.
+
+Pages exist along the local Z direction.
+
+Moving forward or backward changes which page occupies the current position.
+
+Videos progress through timestamps rather than pages.
+
+Each timestamp behaves as a meaningful location inside the video's own progression.
+
+Regardless of resource type, progression always represents moving through the resource itself rather than leaving it.
+
+---
+
+# Questions Become Objects
+
+Whenever the learner encounters something they wish to understand better, they simply select it.
+
+For books and PDFs, this is usually a highlighted passage or image.
+
+For videos, objects naturally appear when the playback reaches meaningful timestamps.
+
+The learner never searches through menus for additional explanations.
+
+Instead, explanations emerge directly from the material that caused the question.
+
+---
+
+# Objects
+
+Selecting something creates a learning object beside the resource.
+
+A visible dotted thread connects the object to the location from which it emerged.
+
+The thread communicates origin.
+
+It answers a simple question:
+
+*"Where did this come from?"*
+
+Objects may represent many different kinds of learning material.
+
+Examples include:
+
+* interactive diagrams
+* simulations
+* equations
+* experiments
+* historical stories
+* questions
+* analogies
+* videos
+* books
+* PDFs
+* illustrations
+
+Every object follows the same interaction model.
+
+Objects may be expanded.
+
+Expanded objects may reveal additional objects.
+
+The learner only learns one rule:
+
+**Expand something to discover what exists inside it.**
+
+---
+
+# Progressive Discovery
+
+Knowledge is never presented all at once.
+
+Objects reveal only what is currently relevant.
+
+As understanding grows, additional structure naturally appears.
+
+Every newly revealed object feels earned through exploration.
+
+The learner should repeatedly experience the feeling:
+
+*"I found this."*
+
+rather than
+
+*"The application opened another window."*
+
+---
+
+# Scale
+
+Objects farther from the original resource gradually become smaller.
+
+This does not indicate importance.
+
+Instead, scale communicates conceptual distance.
+
+The learner naturally zooms toward increasingly specific ideas.
+
+Large foundational ideas remain readable from afar.
+
+Small specialized ideas reveal themselves only through closer inspection.
+
+The world behaves like a continuously explorable landscape.
+
+---
+
+# Continuous Context
+
+The learner never leaves the current exploration.
+
+The original resource always remains visible within the environment.
+
+Objects appear around it rather than replacing it.
+
+Context is never discarded.
+
+Understanding grows outward instead of branching into disconnected screens.
+
+---
+
+# Nested Resources
+
+Books, PDFs, and videos may themselves appear as learning objects.
+
+Initially they behave as embedded references.
+
+They may automatically navigate to the relevant page or timestamp while remaining compact.
+
+Only when the learner intentionally enters them do they unfold into their own explorable environments.
+
+Every resource therefore behaves consistently regardless of whether it was opened from the library or discovered through exploration.
+
+---
+
+# Books and PDFs
+
+When expanded fully, books and PDFs unfold into spatial page terrain.
+
+Pages occupy positions along their own local progression.
+
+Every learning object remains attached to the page from which it originated.
+
+Moving through the pages moves the entire branch of attached objects together.
+
+The learner never loses contextual relationships while progressing through the document.
+
+---
+
+# Videos
+
+Videos unfold through timestamps rather than pages.
+
+Objects appear only when the playback reaches meaningful moments.
+
+The video may automatically pause to allow exploration.
+
+If the learner continues playback while interacting with objects, the video transitions into a picture-in-picture view in the lower-left corner.
+
+Playback continues without interrupting exploration.
+
+Seeking through the timeline moves timestamp positions together with every object attached to them.
+
+The learner experiences a continuous lesson rather than disconnected annotations.
+
+---
+
+# Visible Threads
+
+Visible dotted threads communicate structural origin.
+
+They answer the question:
+
+*"Which object produced this one?"*
+
+Every object has a visible parent.
+
+These structural relationships keep the learner oriented throughout exploration.
+
+---
+
+# Invisible Relationships
+
+The most important relationships inside Auronima are never drawn.
+
+They are behavioral.
+
+When one object causes another object to react, an invisible semantic relationship exists between them.
+
+For example:
+
+An interactive mirror simulation changes.
+
+↓
+
+A property table immediately highlights the matching row.
+
+↓
+
+An equation updates its variables.
+
+↓
+
+A graph reshapes itself.
+
+The learner experiences these reactions as one connected idea.
+
+No visible thread is required.
+
+The relationship is expressed through synchronized behavior.
+
+These invisible behavioral relationships form the true conceptual network of Auronima.
+
+Objects are connected not only because they originate from one another, but because they actively influence one another.
+
+Understanding emerges from observing these interactions.
+
+---
+
+# Exploration
+
+Every object may continue revealing additional objects.
+
+There is no practical depth limit.
+
+Knowledge unfolds recursively.
+
+Each expanded object temporarily becomes the center of its own local exploration while remaining connected to everything that came before it.
+
+Exploration therefore feels continuous regardless of depth.
+
+---
+
+# Collapsing Exploration
+
+Exploration may be closed at any time.
+
+Instead of closing individual windows, the learner selects the visible thread connecting two objects.
+
+Everything beyond that relationship recursively folds inward.
+
+The folding animation always begins at the outermost descendants.
+
+Each level collapses into its parent.
+
+The process continues recursively until only the directly connected object remains.
+
+The learner experiences the branch as naturally folding back into itself.
+
+Closed branches are considered finished explorations.
+
+Their internal state is discarded.
+
+Reopening begins a fresh exploration rather than restoring previous branches.
+
+---
+
+# Navigation
+
+Movement remains physically consistent throughout the environment.
+
+The learner moves freely through space.
+
+Zoom reveals additional detail.
+
+Progression moves through pages or timestamps.
+
+Every interaction preserves orientation instead of replacing one interface with another.
+
+---
+
+# Exploration Map
+
+The Exploration Map is separate from the spatial environment.
+
+It is not a miniature version of the world.
+
+Instead, it records only what the learner has already discovered.
+
+Books, objects, and relationships appear only after they have been explored.
+
+The map represents understanding rather than geography.
+
+It grows alongside the learner.
+
+---
+
+# Returning Home
+
+The learner may return home at any time.
+
+Selecting the home node activates the exploration rope.
+
+The rope traces the exact exploration path that produced the learner's current understanding.
+
+It may be followed step by step through previously explored resources.
+
+The border of the Exploration Map also continuously indicates the direction of home.
+
+Selecting it immediately returns to the home resource.
+
+The rope supports careful retracing.
+
+The border supports rapid return.
+
+---
+
+# Design Goal
+
+The learner should never feel as though they are navigating software.
+
+Every interaction should reinforce the feeling that knowledge already possesses an internal structure waiting to be uncovered.
+
+Objects reveal relationships.
+
+Relationships trigger behaviors.
+
+Behaviors reveal deeper understanding.
+
+The learner does not move between isolated applications.
+
+They continuously explore a living network of connected ideas, where every discovery naturally leads to another without losing context or orientation.

@@ -1,0 +1,25 @@
+Auronima is a relational learning interface built around textbooks.
+
+It is NOT:
+
+* a social platform
+* an LMS
+* a gamified education app
+* an AI tutoring system
+* or a startup-style “education ecosystem”
+
+Core philosophy:
+
+“People understand concepts better when new ideas are connected meaningfully to things they already understand.”
+
+The system treats textbooks as terrain, and understanding as a network of conceptual relations layered onto that terrain.
+
+Learning should feel exploratory and relational:
+
+* analogies
+* prerequisite ideas
+* future abstractions
+* intuition bridges
+* conceptual rabbit holes
+
+Understanding should emerge through connected exploration.
