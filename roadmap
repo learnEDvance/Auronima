@@ -1,0 +1,36 @@
+roadmap:
+1.rendering engine(on it)
+2.coordinate system
+3.object system
+4.event system
+6.content processing(adding+connecting)
+7.database
+8.content
+
+temp flow:
+                         AURONIMA
+                            │
+              ┌─────────────┴─────────────┐
+              │                           │
+         CONTENT SYSTEM                ENGINE
+              │                           │
+       ┌──────┴──────┐             ┌──────┴──────┐
+       │             │             │             │
+   CONTENT        OBJECTIFY      Objects       Events
+   PROCESSING       │             │             │
+       │             ▼             │        Synchronization
+       │       Object Graph        │             │
+       │             │             │             │
+       │             └─────────────┤             │
+       │                           │             │
+       ▼                           ▼             ▼
+   Raw Files                  Coordinate     Scheduler
+       │                       System           │
+   ┌───┼────┬────┐                │         Worker Pool
+   │   │    │    │                │             │
+  PDF Video Image Text            └──────┬──────┘
+   │   │    │    │                       │
+   └───┴────┴────┘                       ▼
+                                   Rendering Engine
+                                         │
+                                       WebGPU

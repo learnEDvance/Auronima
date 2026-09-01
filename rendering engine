@@ -1,0 +1,42 @@
+rendering engine:
+requirements/constraints:
+1.x,y,z movement
+2.no rotation
+3.zooming
+4.no obj rotation
+5.expanded layers of an object are close together(in z), except when 1 is viewable to the cam and the one behind cam.
+6.as objects keep on increasing in distance from main content, their size reduces. main contents are also in heirarchy. where sub explanations of an object will make that object a main content under the heirarchy of its main content. this affects size. as well.
+
+
+
+
+objects will change the following propoerties by change in z dir:
+1.size. by m=k/z. where k is constant.m is scale.
+2.rendering sequence. where sequence of rendering objects will be zn,zn-1,zn-2...z1.
+3.change of speed of object to account fov. with formula thetax=arctan(x/z). where theta is angular pos of obj relative to cam.
+4.change transperency of object when z<0.25m by g=z/0.25.
+
+RENDERING ENGINE PIPELINE(WIP)
+│
+├── Update Manager
+│
+├── Object Store
+│
+├── Resource Manager
+│
+├── Spatial Processor
+│
+├── Projection
+│
+├── Ordering
+│
+├── Render Preparation
+└── WebGPU Backend
+
+
+tasklist:
+1.finalize algo
+2.define render pipeline
+3.define request rows
+4.verify
+5.get coded
