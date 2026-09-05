@@ -1,1 +1,61 @@
-full rethink needed on current approach.
+# Rendering Engine v2 — rethink (authoritative)
+
+Supersedes archives/rendering engine1.txt for movement/speed. Keep the v1
+projection formulas (size m=k/z, transparency g=z/0.25, ordering far->near)
+but fix the movement model.
+
+## Model
+
+Camera fixed, looking down +z. dist = cam.z - object.z (distance to object).
+
+## Projection (position) — angular, no focal-division blow-up
+
+    thetaX = atan2(x, dist)
+    thetaY = atan2(y, dist)
+    halfAngY = fov / 2
+    halfAngX = halfAngY * (W/H)
+    px = W/2 + (thetaX / halfAngX) * (W/2)
+    py = H/2 - (thetaY / halfAngY) * (H/2)
+
+## Speed — natural perspective, identical for x and y
+
+On-screen speed is the angular derivative of the projection above:
+
+    d(px)/dt = (H/fov) * dist/(dist^2 + x^2) * vx
+    d(py)/dt = (H/fov) * dist/(dist^2 + y^2) * vy
+
+Keep the world-speed input (vx, vy, vz) CONSTANT while a key is held.
+Result, on screen:
+
+    close object  -> dist small -> on-screen speed LARGE  (fast)
+    far object    -> dist large -> on-screen speed SMALL  (slow)
+
+This follows directly from theta = arctan(offset/dist): the same world
+step sweeps a bigger angle when the object is near.
+
+NEVER invert this by scaling world speed with 1/dist or dist; the 1/dist
+relation is the feature.
+
+x and y use the SAME formula. Any asymmetry is a bug.
+
+## Motion
+
+    W / S  -> z (W = closer, S = farther)
+    A / D  -> x
+    Q / E  -> y
+    scroll -> zoom (camera distance, cam.z)
+    dt must come from rAF timestamps;  use time = performance.now() deltas.
+    Never use a fixed per-frame 1/60 step (fps-dependent / "inverted" feel).
+
+## Size
+
+    m = k / dist           k constant
+    halfSizePx = half * m * pxPerRad,  pxPerRad = (H/fov)
+
+## Transparency
+
+    g = dist / 0.25        when dist < 0.25
+
+## Ordering
+
+    far -> near, sort by dist descending (painter's algorithm)
