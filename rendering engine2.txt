@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Rendering Engine v2 — rethink (authoritative)
 
 Supersedes archives/rendering engine1.txt for movement/speed. Keep the v1
@@ -59,3 +60,11 @@ x and y use the SAME formula. Any asymmetry is a bug.
 ## Ordering
 
     far -> near, sort by dist descending (painter's algorithm)
+=======
+# Z projection (perspective scaling)
+scale_z = focal_length / (focal_length + z)
+
+# Zoom (change visible world area)
+view_width  = canvas_width / zoom
+view_height = canvas_height / zoom
+>>>>>>> d4ee53cfd4ae7b786f57b9e4bcf22ad089cd39e7

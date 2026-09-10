@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Auronima — Rendering Engine (Canvas)</title>
+  <style>
+    html, body { margin: 0; height: 100%; background: #000; overflow: hidden; font-family: monospace; }
+    canvas { display: block; width: 100%; height: 100%; }
+    #hud {
+      position: fixed; top: 12px; left: 12px; z-index: 10;
+      color: #9fd; background: rgba(0,0,0,.55); padding: 10px 12px;
+      font-size: 12px; line-height: 1.5; border: 1px solid #234; white-space: pre;
+      user-select: none; pointer-events: none;
+    }
+    #help {
+      position: fixed; bottom: 12px; left: 12px; z-index: 10;
+      color: #789; background: rgba(0,0,0,.55); padding: 8px 12px;
+      font-size: 12px; line-height: 1.6; border: 1px solid #234; user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="hud"></div>
+  <div id="help">W: closer · S: farther · A/D: move x · Q/E: move y · Scroll: zoom · R: reset</div>
+  <canvas id="c"></canvas>
+  <script src="main.js"></script>
+</body>
+</html>
