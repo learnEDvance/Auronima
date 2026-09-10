@@ -1,1 +1,6 @@
-full rethink needed on current approach.
+# Z projection (perspective scaling)
+scale_z = focal_length / (focal_length + z)
+
+# Zoom (change visible world area)
+view_width  = canvas_width / zoom
+view_height = canvas_height / zoom
