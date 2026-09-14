@@ -15,28 +15,3 @@ objects will change the following propoerties by change in z dir:
 2.rendering sequence. where sequence of rendering objects will be zn,zn-1,zn-2...z1.
 3.change of speed of object to account fov. with formula thetax=arctan(x/z). where theta is angular pos of obj relative to cam.
 4.change transperency of object when z<0.25m by g=z/0.25.
-
-RENDERING ENGINE PIPELINE(WIP)
-│
-├── Update Manager
-│
-├── Object Store
-│
-├── Resource Manager
-│
-├── Spatial Processor
-│
-├── Projection
-│
-├── Ordering
-│
-├── Render Preparation
-└── WebGPU Backend
-
-
-tasklist:
-1.finalize algo
-2.define render pipeline
-3.define request rows
-4.verify
-5.get coded

@@ -1,52 +1,69 @@
 # Auronima — agent instructions
 
-Design-phase project: a relational/spatial learning interface for textbooks.
-There is **no source code, build system, tests, or lint/typecheck tooling** in
-this repo. Do not assume any exist. What exists on disk is textbook data and
-design specs only.
+Relational/spatial learning interface for textbooks (see `info/plan.txt` for the
+vision: "Fractal Knowledge Space", learning objects = **Guros**). Current active
+work is step 1 of the roadmap in `roadmap.txt`: the **rendering engine** — a
+working Canvas 2D prototype already exists.
+
+## Stack & verification (no build/test/lint tooling)
+
+Pure vanilla stack, by design (`info/plan.txt`): vanilla JS/HTML/CSS, a local
+Python server, filesystem storage. Deliberately **no** React, Next.js, databases,
+or cloud. Do not introduce a build system or frameworks.
+
+- **Run/verify the engine**: `python3 server.py` then open
+  `http://localhost:8000` (serves repo root, port 8000). The Canvas build also
+  runs straight from `file://`; the server only becomes necessary later for
+  WebGPU (secure context) and `fetch()` of JSON.
+- **No tests, lint, or build exist.** Verify by opening `index.html` in a browser
+  and checking the demo (W/S z, A/D x, Q/E y, scroll zoom, R reset; HUD shows
+  computed projection values).
+- Don't run `node`/`npm` for anything — no Node tooling is installed or expected.
 
 ## Repo structure
 
 ```
-book/<book-id>/
-  <book-id>.json   # book metadata (see schema)
-  jpg/             # page scans: {page_number}.jpg (zero-indexed!)
-info/              # design documents (plans, not code)
-  plan.txt                     # vision: fractal knowledge space
-  idea.txt                     # core philosophy
-  event system.txt             # event execution engine design
-  final ui.txt                 # unified fractal UI model
+main.js                          # Canvas 2D rendering engine prototype (active work)
+index.html                       # single-page canvas demo, loads main.js
+server.py                        # optional local static server (python3 server.py)
+archives/rendering engine1.txt   # engine v1 spec — superseded (see below)
+"rendering engine2.txt"          # engine v2 spec — AUTHORITATIVE (see gotchas)
+info/                            # design docs (vision, plans — no executable code)
+  plan.txt                       # core vision: fractal knowledge space, Guros, universes
+  idea.txt                       # philosophy / overview
+  final ui.txt                   # unified fractal UI model
   hypothetical user experience.txt
-  executor.txt                 # empty placeholder — do not rely on it
-roadmap.txt        # roadmap + architecture flow
-"rendering engine.txt"         # rendering engine spec + pipeline (note: filename
-                               #   contains a space; quote it in shell)
+roadmap.txt                      # roadmap + engine/event flow diagram
+book/<book-id>/                  # textbook data (former layout; NOT in current worktree)
 ```
 
-`info/` was formerly `info-to-agent/` in early git history; treat content, not
-path, as source of truth.
+## Rendering engine — specs and hard constraints
 
-## Book metadata schema
+Two spec files; they disagree. **`rendering engine2.txt` is authoritative** for
+movement/speed; `archives/rendering engine1.txt` v1 formulas still hold for
+projection/size/transparency/ordering.
 
-Every `book/*/<id>.json` follows this shape:
+- `rendering engine2.txt` literally contains leftover unresolved git
+  merge-conflict markers. Only the top section
+  (`# Rendering Engine v2 — rethink (authoritative)`) is real; the bottom hunk
+  under `=======`/`>>>>>>>` is stale. Do not "resolve" or delete either file's
+  conflicted region unless asked.
+- Pipeline (per `main.js` and archive spec): Update Manager → Spatial Processor →
+  Projection → Ordering → Render Preparation → (future WebGPU backend).
+- Projection is **angular, no focal-division**: `theta = atan2(offset, dist)`,
+  `m = k/dist`, transparency `g = dist/0.25` (dist < 0.25), painter's ordering
+  far→near (`sort desc by dist`). No object rotation, ever.
+- Movement model gotchas from engine v2 (agent would likely get these wrong):
+  - camera is fixed, looking down +z; `dist = cam.z - object.z`.
+  - world-speed input stays **constant** while a key is held; on-screen speed is
+    its angular derivative. **NEVER** scale world speed by `1/dist` or `dist` —
+    the near-fast/far-slow relation is the feature.
+  - x and y use the **exact same** formula; any asymmetry is a bug.
+  - `dt` must come from `requestAnimationFrame`/`performance.now()` timestamps —
+    never a fixed `1/60` step (fps-dependent).
 
-```json
-{
-  "id": "<book-id>",
-  "title": "NCERT <book-id>" or human-readable,
-  "pages": <int>,
-  "start_page": 0,
-  "image_format": "jpg",
-  "selections": []
-}
-```
-
-- `selections` is the extension point for highlights/annotations; currently
-  empty in all books. Preserve the pattern when adding data.
-- Image filenames are **zero-indexed** page numbers (`0.jpg`, `1.jpg`, …);
-  `start_page` is always `0`.
-- Book ID prefix encodes subject: `iesc` = Science, `jesc` = Social Science,
-  `kech` = Chemistry. Currently: iesc105, iesc108, iesc109, jesc101, kech101.
+Roadmap after the engine (see `roadmap.txt`): coordinate system → object system →
+event system → content processing → database.
 
 ## Developer capability constraint (important convention)
 
@@ -64,8 +81,11 @@ Default expectation is "implement it completely," not "provide guidance."
 
 ## Working notes
 
-- Design specs in `info/` describe the vision but contain no executable code;
-  they may contradict each other as the design evolves. Trust the latest/roadmap
-  context, not any single doc.
+- Git commit history and README are informal (owner is new to GitHub); match the
+  existing style — short, lowercase, plain commit messages.
+- Design specs in `info/` describe vision but contain no executable code; they
+  may contradict each other and the engine specs as designs evolve. Trust the
+  latest/roadmap/code context, not any single doc.
+- `info/` was formerly `info-to-agent/`; treat content, not path, as authority.
 - `.gitignore` only lists `.directory`.
-- Keep filenames with spaces (`rendering engine.txt`) quoted in shell commands.
+- Keep filenames with spaces (`rendering engine2.txt`) quoted in shell commands.
