@@ -1,6 +1,6 @@
 // Auronima rendering engine — Canvas 2D seed.
 //
-// Pipeline (mirrors the spec in archives/rendering engine1.txt):
+// Pipeline (mirrors the spec in rendering engine1.txt):
 //   Update Manager -> Spatial Processor -> Projection -> Ordering -> Render Preparation
 //
 // Spec formulas, applied literally per object:
@@ -98,8 +98,8 @@ function frame(time) {
   // Move the world in a constant human-speed (units per second), then let
   // the projection convert to screen space. On-screen speed then follows
   //   d(px)/dt = (H/fov) * dist/(dist^2 + x^2) * vx
-  // so a CLOSE object sweeps FAST and a FAR one slow (natural perspective,
-  // engine2.txt). Same formula for x and y. dt from rAF timestamps.
+  // so a CLOSE object sweeps FAST and a FAR one slow (natural perspective).
+  // Same formula for x and y. dt from rAF timestamps.
   const dt = Math.min(0.05, Math.max(0.001, (time - lastTime) / 1000));
   lastTime = time;
 

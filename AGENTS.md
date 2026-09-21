@@ -26,34 +26,26 @@ or cloud. Do not introduce a build system or frameworks.
 main.js                          # Canvas 2D rendering engine prototype (active work)
 index.html                       # single-page canvas demo, loads main.js
 server.py                        # optional local static server (python3 server.py)
-archives/rendering engine1.txt   # engine v1 spec — superseded (see below)
-"rendering engine2.txt"          # engine v2 spec — AUTHORITATIVE (see gotchas)
+rendering engine1.txt            # engine spec — formulas + constraints (see below)
 info/                            # design docs (vision, plans — no executable code)
   plan.txt                       # core vision: fractal knowledge space, Guros, universes
   idea.txt                       # philosophy / overview
   final ui.txt                   # unified fractal UI model
   hypothetical user experience.txt
 roadmap.txt                      # roadmap + engine/event flow diagram
-book/<book-id>/                  # textbook data (former layout; NOT in current worktree)
 ```
 
-## Rendering engine — specs and hard constraints
+## Rendering engine — spec and hard constraints
 
-Two spec files; they disagree. **`rendering engine2.txt` is authoritative** for
-movement/speed; `archives/rendering engine1.txt` v1 formulas still hold for
-projection/size/transparency/ordering.
+Single spec file (`rendering engine1.txt`) plus the working prototype in
+`main.js`; when they disagree, `main.js` is the source of truth.
 
-- `rendering engine2.txt` literally contains leftover unresolved git
-  merge-conflict markers. Only the top section
-  (`# Rendering Engine v2 — rethink (authoritative)`) is real; the bottom hunk
-  under `=======`/`>>>>>>>` is stale. Do not "resolve" or delete either file's
-  conflicted region unless asked.
-- Pipeline (per `main.js` and archive spec): Update Manager → Spatial Processor →
-  Projection → Ordering → Render Preparation → (future WebGPU backend).
+- Pipeline (per `main.js`): Update Manager → Spatial Processor → Projection →
+  Ordering → Render Preparation → (future WebGPU backend).
 - Projection is **angular, no focal-division**: `theta = atan2(offset, dist)`,
   `m = k/dist`, transparency `g = dist/0.25` (dist < 0.25), painter's ordering
   far→near (`sort desc by dist`). No object rotation, ever.
-- Movement model gotchas from engine v2 (agent would likely get these wrong):
+- Movement model (agent would likely get these wrong):
   - camera is fixed, looking down +z; `dist = cam.z - object.z`.
   - world-speed input stays **constant** while a key is held; on-screen speed is
     its angular derivative. **NEVER** scale world speed by `1/dist` or `dist` —
@@ -88,4 +80,4 @@ Default expectation is "implement it completely," not "provide guidance."
   latest/roadmap/code context, not any single doc.
 - `info/` was formerly `info-to-agent/`; treat content, not path, as authority.
 - `.gitignore` only lists `.directory`.
-- Keep filenames with spaces (`rendering engine2.txt`) quoted in shell commands.
+- Keep filenames with spaces (`rendering engine1.txt`) quoted in shell commands.

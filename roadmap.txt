@@ -3,9 +3,9 @@ roadmap:
 2.coordinate system
 3.object system
 4.event system
-6.content processing(adding+connecting)
-7.database
-8.content
+5.content processing(adding+connecting)
+6.database
+7.content
 
 temp flow:
                          AURONIMA
