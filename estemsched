@@ -1,0 +1,25 @@
+1.prototype base
+1.1.create a square on black screen
+1.2.faint grid on the z/x plane
+1.3.movable cam
+1.4.phase through effect, finishing, polishing. modularizing
+1.5.clickable rectangle
+1.6.colour changing rectangle
+1.7.zoom feature
+1.8.multiple rectanlges
+1.9.rectangle expansion mechanic, collapse mechanic
+1.10.selection of desired rectangle from expanded rectangles after expansion mechanic and focusing on a rectangle from expansion(while also focusing on that z layer)
+1.11.threads(lines) connecting different rectangles
+1.12.threads close rectangles when they are clicked on.
+1.13.rectanlges triggering other rectangles by clickig on them(the actions can be color flash,expansion or collision)
+
+
+
+2.add static files as objects
+3.create proper ui. finalize website layout
+4.create homepage
+5.create a simple contribution system for outsiders to contribute
+6.initiate distribution and deployment
+7.create and finalize object system.
+8.add support for dynamic files/objects
+9.<idk, still thinking?????>
