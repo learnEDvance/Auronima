@@ -1,9 +1,10 @@
 # Auronima — agent instructions
 
 Relational/spatial learning interface for textbooks (see `info/plan.txt` for the
-vision: "Fractal Knowledge Space", learning objects = **Guros**). Current active
-work is step 1 of the roadmap in `roadmap.txt`: the **rendering engine** — a
-working Canvas 2D prototype already exists.
+vision: "Fractal Knowledge Space", learning objects = **Guros**). The project
+restarted with a docs-only worktree (see `roadmap.txt`); a working Canvas 2D
+engine prototype existed but was removed in the restart and remains recoverable
+in git history.
 
 ## Stack & verification (no build/test/lint tooling)
 
@@ -11,37 +12,34 @@ Pure vanilla stack, by design (`info/plan.txt`): vanilla JS/HTML/CSS, a local
 Python server, filesystem storage. Deliberately **no** React, Next.js, databases,
 or cloud. Do not introduce a build system or frameworks.
 
-- **Run/verify the engine**: `python3 server.py` then open
-  `http://localhost:8000` (serves repo root, port 8000). The Canvas build also
-  runs straight from `file://`; the server only becomes necessary later for
-  WebGPU (secure context) and `fetch()` of JSON.
-- **No tests, lint, or build exist.** Verify by opening `index.html` in a browser
-  and checking the demo (W/S z, A/D x, Q/E y, scroll zoom, R reset; HUD shows
-  computed projection values).
+- **No runnable code in the worktree right now** — the engine prototype
+  (`main.js`), demo (`index.html`), and server (`server.py`) were deleted in the
+  restart; they remain recoverable in git history.
+- **No tests, lint, or build exist.**
 - Don't run `node`/`npm` for anything — no Node tooling is installed or expected.
 
 ## Repo structure
 
 ```
-main.js                          # Canvas 2D rendering engine prototype (active work)
-index.html                       # single-page canvas demo, loads main.js
-server.py                        # optional local static server (python3 server.py)
-rendering engine1.txt            # engine spec — formulas + constraints (see below)
-info/                            # design docs (vision, plans — no executable code)
+AGENTS.md                        # agent instructions (this file)
+README.md                        # informal project readme
+roadmap.txt                      # roadmap + engine/event flow diagram
+estemsched                       # stray file — keep, do not touch
+info/                            # documentation (vision, plans, specs — no executable code)
+  rendering engine1.txt          # engine spec — formulas + constraints (see below)
   plan.txt                       # core vision: fractal knowledge space, Guros, universes
   idea.txt                       # philosophy / overview
   final ui.txt                   # unified fractal UI model
   hypothetical user experience.txt
-roadmap.txt                      # roadmap + engine/event flow diagram
 ```
 
 ## Rendering engine — spec and hard constraints
 
-Single spec file (`rendering engine1.txt`) plus the working prototype in
-`main.js`; when they disagree, `main.js` is the source of truth.
+Single spec file (`info/rendering engine1.txt`); no engine code exists in the
+worktree after the restart.
 
-- Pipeline (per `main.js`): Update Manager → Spatial Processor → Projection →
-  Ordering → Render Preparation → (future WebGPU backend).
+- Pipeline: Update Manager → Spatial Processor → Projection → Ordering → Render
+  Preparation → (future WebGPU backend).
 - Projection is **angular, no focal-division**: `theta = atan2(offset, dist)`,
   `m = k/dist`, transparency `g = dist/0.25` (dist < 0.25), painter's ordering
   far→near (`sort desc by dist`). No object rotation, ever.
@@ -75,9 +73,12 @@ Default expectation is "implement it completely," not "provide guidance."
 
 - Git commit history and README are informal (owner is new to GitHub); match the
   existing style — short, lowercase, plain commit messages.
+- **NEVER commit or push** — no `git commit`, no `git push`, ever. Leave all
+  changes in the working tree; the owner commits and pushes when they want.
 - Design specs in `info/` describe vision but contain no executable code; they
   may contradict each other and the engine specs as designs evolve. Trust the
   latest/roadmap/code context, not any single doc.
 - `info/` was formerly `info-to-agent/`; treat content, not path, as authority.
 - `.gitignore` only lists `.directory`.
-- Keep filenames with spaces (`rendering engine1.txt`) quoted in shell commands.
+- Keep filenames with spaces (`info/rendering engine1.txt`) quoted in shell
+  commands.
