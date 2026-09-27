@@ -1,41 +1,40 @@
 import * as THREE from "three";
 
-// ------------------------------------------------------------------ renderer
+//renderer
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
-// ---------------------------------------------------- scene: the black screen
+//scene:black void(questioning life)
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0x000000);
 
-// --------------- camera: exists but frozen (movement comes in step 1.3) ------
+//camera:still(live cam in 1.3)
 const camera = new THREE.PerspectiveCamera(
-  60,                                    // fov (degrees)
-  window.innerWidth / window.innerHeight, // aspect
+  60,                                    // fov (deg)
+  window.innerWidth / window.innerHeight, // aspect ratio
   0.1,                                   // near
   10000                                  // far
 );
-camera.position.set(0, 0, 5); // parked in front of the square; aim untouched (fixed orientation)
+camera.position.set(0, 0, 5); // 5u away from square in z
 
-// --------------------------------------------------------------- the square --
-// PlaneGeometry lies flat in the x/y plane at z = 0, facing the camera.
+//DA square
+//in x/y plane. at z=0, size=2*2
 const square = new THREE.Mesh(
   new THREE.PlaneGeometry(2, 2),
-  new THREE.MeshBasicMaterial({ color: 0x39ff14 }) // bright neon green; no lights needed
+  new THREE.MeshBasicMaterial({ color: 0x39ff14 }) //cyberpunk neon, hell yeah!
 );
 scene.add(square);
 
-// -------------------------------------------------------- draw a single frame
-// 1.1 spec: exactly one render call. Step 1.3 replaces this with the loop.
+//framedraw
+//1 framegen call.WIP to loop it
 function draw() {
   renderer.render(scene, camera);
 }
 draw();
 
-// Small nicety: keep the square centered and undistorted when the window
-// changes size. Still no loop — this only redraws when the window actually changes.
+//change screen aspect ratio with real screen
 window.addEventListener("resize", () => {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();

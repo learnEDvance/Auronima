@@ -1,8 +1,4 @@
 #!/usr/bin/env python3
-"""Local static server for the Auronima prototype.
-ES modules (and later fetch() of JSON) need HTTP, so file:// will not work.
-Run: python3 server.py  then open http://localhost:8000
-"""
 import http.server
 import socketserver
 import os
@@ -20,6 +16,11 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         super().end_headers()
 
 
-with socketserver.TCPServer(("", PORT), Handler) as httpd:
-    print(f"Serving {ROOT} at http://localhost:{PORT}")
+class Server(socketserver.TCPServer):
+    # Lets us restart right after a stop instead of hitting:
+    # OSError: [Errno 98] Address already in use (leftover TIME-WAIT socket)
+    allow_reuse_address = True
+
+
+with Server(("", PORT), Handler) as httpd:
     httpd.serve_forever()
