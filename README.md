@@ -16,8 +16,8 @@ Very WIP, dev is a crazy inexperienced lunatic
 
 1. **Prototype base**
    - [x] 1.1 — create a square on black screen
-   - [O] 1.2 — faint grid on the z/x plane
-   - [ ] 1.3 — movable cam
+   - [X] 1.2 — faint grid on the z/x plane
+   - [O] 1.3 — movable cam
    - [ ] 1.4 — phase through effect, finishing, polishing, modularizing
    - [ ] 1.5 — clickable rectangle
    - [ ] 1.6 — colour changing rectangle
@@ -42,26 +42,23 @@ Very WIP, dev is a crazy inexperienced lunatic
 ### completed Challenge!
 
 1.Rendered a neon square with three.js!
+2.Added a grid in the scene using grid.helper
 
 
 ---
 
 ### Current Challenge
-> **add grid in x/z plane**
+> **make the cam movable**
 
 
 ---
 
-### Current Challenge
-1.three.js has the following things
-    -scene
-    -cam
-    -object
-    -renderer
-2.js is crazy different from python
-3.js needs eventlisteners to detect events
-4.some basics of rendering
-
+### New things discovered
+1.prebuilt functions
+2.gridhelper
+3.hex codes for colours
+4.object visibility(keeping grid at y=0 is not visible cause our cam is in same y layer)
+5.object positioning(placing grid at y=-2)
 ---
 
 ### Development Notes
