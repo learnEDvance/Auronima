@@ -27,6 +27,10 @@ const square = new THREE.Mesh(
 );
 scene.add(square);
 
+const grid = new THREE.GridHelper(20, 20, 0x3a4256, 0x22262f);
+grid.position.y = -2; //grid placed at y=-2
+scene.add(grid);
+
 //framedraw
 //1 framegen call.WIP to loop it
 function draw() {
