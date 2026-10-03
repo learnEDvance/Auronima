@@ -32,11 +32,23 @@ grid.position.y = -2; //grid placed at y=-2
 scene.add(grid);
 
 //framedraw
-//1 framegen call.WIP to loop it
+//framegen loop
 function draw() {
   renderer.render(scene, camera);
 }
-draw();
+
+//move time forward
+ let last = performance.now(); //prev frame
+  
+  function frame(now) {
+    const dt = Math.min((now - last) / 1000, 0.1); //time interval
+    last = now; //update last framegen timestamp
+
+    draw(); //draw the damn frame
+
+    requestAnimationFrame(frame); //asks for current frame
+  }
+  requestAnimationFrame(frame);
 
 //change screen aspect ratio with real screen
 window.addEventListener("resize", () => {
