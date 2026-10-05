@@ -31,6 +31,34 @@ const grid = new THREE.GridHelper(100, 100, 0x3a4256, 0x22262f);
 grid.position.y = -2; //grid placed at y=-2
 scene.add(grid);
 
+//keebmap
+const keys = {
+  a: false, d: false,                   //(-/+)x
+  w: false, s: false,                   //(-/+)y
+  q: false, e: false,                   //(-/+)z
+  arrowleft: false, arrowright: false,  //(-/+)x
+  arrowup: false, arrowdown: false,     //(-/+)y
+  "<": false, ">": false,               //(-/+)z
+  ",": false, ".": false,               //(-/+)z
+}
+//keeb events
+window.addEventListener("keydown", (e) => {
+  const k = e.key.toLowerCase();
+  if (k in keys) keys[k] = true;
+  console.log("keydown:", k);
+});
+
+window.addEventListener("keyup", (e) => {
+  const k = e.key.toLowerCase();
+  if (k in keys) keys[k] = false;
+  console.log("keyup:", k);
+});
+
+//prevent window focus loss issues
+window.addEventListener("blur", () => {
+  for (const k in keys) keys[k] = false;
+});
+
 //framedraw
 //framegen loop
 function draw() {
