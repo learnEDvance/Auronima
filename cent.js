@@ -34,24 +34,21 @@ scene.add(grid);
 //keebmap
 const keys = {
   a: false, d: false,                   //(-/+)x
-  w: false, s: false,                   //(-/+)y
-  q: false, e: false,                   //(-/+)z
   arrowleft: false, arrowright: false,  //(-/+)x
-  arrowup: false, arrowdown: false,     //(-/+)y
-  "<": false, ">": false,               //(-/+)z
-  ",": false, ".": false,               //(-/+)z
+  w: false, s: false,                   //(-/+)z forward/backward
+  arrowup: false, arrowdown: false,     //(-/+)z
+  " ": false,                           //(+/-)y up
+  shift: false,                         //(+/-)y down
 }
 //keeb events
 window.addEventListener("keydown", (e) => {
   const k = e.key.toLowerCase();
   if (k in keys) keys[k] = true;
-  console.log("keydown:", k);
 });
 
 window.addEventListener("keyup", (e) => {
   const k = e.key.toLowerCase();
   if (k in keys) keys[k] = false;
-  console.log("keyup:", k);
 });
 
 //prevent window focus loss issues
@@ -71,6 +68,23 @@ function draw() {
   function frame(now) {
     const dt = Math.min((now - last) / 1000, 0.1); //time interval
     last = now; //update last framegen timestamp
+
+    //1.3.3: which direction?
+    let dx = 0, dy = 0, dz = 0;
+    if (keys.a || keys.arrowleft) dx -= 1;             //x
+    if (keys.d || keys.arrowright) dx += 1;            //x
+    if (keys[" "]) dy += 1;                            //y: space = up
+    if (keys.shift) dy -= 1;                           //y: shift = down
+    if (keys.w || keys.arrowup) dz -= 1;               //z: w/↑ = forward
+    if (keys.s || keys.arrowdown) dz += 1;             //z: s/↓ = backward
+
+    //fix physics: dir × speed × time
+    const len = Math.hypot(dx, dy, dz);
+    if (len > 1) { dx /= len; dy /= len; dz /= len; }
+    const SPEED = 10;
+    camera.position.x += dx * SPEED * dt;
+    camera.position.y += dy * SPEED * dt;
+    camera.position.z += dz * SPEED * dt;
 
     draw(); //draw the damn frame
 

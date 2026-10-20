@@ -19,8 +19,8 @@ Very WIP, dev is a crazy inexperienced lunatic
    - [X] 1.2.0 — faint grid on the z/x plane
    - [O] 1.3.0 — movable cam
    - [X] 1.1.1 — render loop
-   - [X] 1.1.2 —keebput 
-   - [O] 1.1.3 — transformations
+   - [O] 1.1.2 —keebput 
+   - [X] 1.1.3 — transformations
    - [ ] 1.4.0 — phase through effect, finishing, polishing, modularizing
    - [ ] 1.5.0 — clickable rectangle
    - [ ] 1.6.0 — colour changing rectangle
