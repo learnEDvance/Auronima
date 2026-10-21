@@ -6,22 +6,18 @@
 
 ### Current State
 
-**Plans and a primitive square maker**
-
-Very WIP, dev is a crazy inexperienced lunatic
-
 ---
 
 ### Roadmap
 
 1. **Prototype base**
    - [x] 1.1.0 — create a square on black screen
-   - [X] 1.2.0 — faint grid on the z/x plane
-   - [O] 1.3.0 — movable cam
-   - [X] 1.1.1 — render loop
-   - [O] 1.1.2 —keebput 
-   - [X] 1.1.3 — transformations
-   - [ ] 1.4.0 — phase through effect, finishing, polishing, modularizing
+   - [x] 1.2.0 — faint grid on the z/x plane
+   - [x] 1.3.0 — movable cam
+   - [x] 1.3.1 — render loop
+   - [x] 1.3.2 — keebput
+   - [x] 1.3.3 — transformations
+   - [O] 1.4.0 — phase through effect, finishing, polishing, modularizing
    - [ ] 1.5.0 — clickable rectangle
    - [ ] 1.6.0 — colour changing rectangle
    - [ ] 1.7.0 — zoom feature
@@ -33,41 +29,31 @@ Very WIP, dev is a crazy inexperienced lunatic
    - [ ] 1.13.0 — rectangles triggering other rectangles on click (actions: color flash, expansion, or collision)
 
 2. **Add static files as objects**
+   - [ ] 2.1 — replace rectangle colours with images
+   - [ ] 2.2 — create a parent/child obj system
+   - [ ] 2.3 — replace rectangle colours with pdf images
+   - [ ] 2.4 — click to trigger actions (for static obj)
 3. **Create proper UI; finalize website layout**
 4. **Create homepage**
 5. **Create a simple contribution system for outsiders**
 6. **Initiate distribution and deployment**
 7. **Create and finalize object system**
 8. **Add support for dynamic files/objects**
-9. **<idk, still thinking...?>**
+9. **Create the community system**
 ---
 
 ### completed Challenge!
-
-1.Rendered a neon square with three.js!
-2.Added a grid in the scene using grid.helper
-3.Created a render loop
-4.created a keymap
-5.successful ke listening
 
 
 ---
 
 ### Current Challenge
-> **make the cam movable**
-> **Subgoal=keeb inputs**
 
 
 ---
 
 ### New things discovered
-1.keyboard listening from browser
-2.alt+tab issues
-3.keymapping
-4.designing the best keeb combo to optimize for user accessibility and comfort
-5.how js hadles arrays(from what i inferred with my current code)
-6.event listeners
-7.ability to track broswer/tab focusing
+
 ---
 
 ### Development Notes
