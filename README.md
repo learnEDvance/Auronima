@@ -6,6 +6,8 @@
 
 ### Current State
 
+A movable world with x/z grid and a hideous green square.
+
 ---
 
 ### Roadmap
@@ -44,15 +46,24 @@
 
 ### completed Challenge!
 
-
+1.Rendered a neon square with three.js!
+2.Added a grid in the scene using grid.helper
+3.Made a render loop that works.
+4.Decent controls for movement?(idk just copied from bloxd.io)
+5.added a favicon
 ---
 
 ### Current Challenge
 
+1.A good phase-through! effect
+2.good finishing/polishing
+3.modularizing of code(better maintainability)
 
 ---
 
 ### New things discovered
+
+not many, this update is just for putting things together.
 
 ---
 
