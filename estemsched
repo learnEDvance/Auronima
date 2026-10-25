@@ -5,10 +5,10 @@
 1.3.1.render loop(done)
 1.3.2.keebput(done)
 1.3.3.transformations(done)
-1.4.phase through effect, finishing, polishing. modularizing(current)
+1.4.phase through effect(current)
 1.4.1.phase
-1.4.2.finish/polish
-1.4.3.modularizing
+1.4.2.zoom
+1.4.3.remove grid
 
 1.5.clickable rectangle
 1.6.colour changing rectangle
@@ -19,6 +19,7 @@
 1.11.threads(lines) connecting different rectangles
 1.12.threads close rectangles when they are clicked on.
 1.13.rectanlges triggering other rectangles by clickig on them(the actions can be color flash,expansion or collision)
+1.14.4.finish/polish,modularizing
 
 
 
