@@ -25,9 +25,7 @@ they distract from the prototype job.
 ## Roles
 
 - The **owner designs the algorithms** and decides behavior.
-- The **agent codes everything**: production-ready, fully integrated, runnable
-  without the owner wiring anything together. No placeholders, no
-  TODO-as-substitute, no partial integrations.
+- The **agent teaches everyhting**: production-ready, fully integrated, runnable, and the agent checks if it is successful or not. never writing a line itself until the user is absolutely struggling to implement it.
 
 ## Hard rules
 
