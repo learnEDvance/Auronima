@@ -6,7 +6,7 @@
 
 ### Current State
 
-A movable world with x/z grid and a hideous green square.
+A movable world with x/z grid and a hideous green square. which you can whizz through?(still not polished though)
 
 ---
 
@@ -19,7 +19,9 @@ A movable world with x/z grid and a hideous green square.
    - [x] 1.3.1 — render loop
    - [x] 1.3.2 — keebput
    - [x] 1.3.3 — transformations
-   - [O] 1.4.0 — phase through effect, finishing, polishing, modularizing
+   - [O] 1.4.0 — phase through effect
+   - [O] 1.4.1 — phase
+   - [ ] 1.4.2 — remove grid
    - [ ] 1.5.0 — clickable rectangle
    - [ ] 1.6.0 — colour changing rectangle
    - [ ] 1.7.0 — zoom feature
@@ -29,6 +31,7 @@ A movable world with x/z grid and a hideous green square.
    - [ ] 1.11.0 — threads (lines) connecting different rectangles
    - [ ] 1.12.0 — threads close rectangles when they are clicked on
    - [ ] 1.13.0 — rectangles triggering other rectangles on click (actions: color flash, expansion, or collision)
+   - [ ] 1.14.0 — finish/polish, modularizing
 
 2. **Add static files as objects**
    - [ ] 2.1 — replace rectangle colours with images
@@ -51,19 +54,19 @@ A movable world with x/z grid and a hideous green square.
 3.Made a render loop that works.
 4.Decent controls for movement?(idk just copied from bloxd.io)
 5.added a favicon
+6.added a rudimentary phase through effect(using distance based opacity changes)[Although i dont like it a lot].
 ---
 
 ### Current Challenge
 
-1.A good phase-through! effect
-2.good finishing/polishing
-3.modularizing of code(better maintainability)
+1.get click data from a rectangle.
+2.process the clicks to trigger actions.
 
 ---
 
 ### New things discovered
 
-not many, this update is just for putting things together.
+Simple fade is not enough to convince pass through effect. will work on it more in estemsched=1.14.
 
 ---
 

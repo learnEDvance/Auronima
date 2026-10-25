@@ -5,10 +5,11 @@
 1.3.1.render loop(done)
 1.3.2.keebput(done)
 1.3.3.transformations(done)
-1.4.phase through effect(on it)
+1.4.phase through effect(done)
 1.4.1.phase(done)
 1.4.2.remove grid(done)
-1.5.clickable rectangle
+
+1.5.clickable rectangle(current)
 1.5.1.click to get a console message
 1.5.2.click on a rectangle for it to send a console message
 1.5.3.click on a rectangle and get the mouse click position relative to the inside area of the rectangle.[to be able to click on paras of a page!]
@@ -22,7 +23,7 @@
 1.12.threads close rectangles when they are clicked on.
 1.13.rectanlges triggering other rectangles by clickig on them(the actions can be color flash,expansion or collision)
 1.14.finish/polish,modularizing
-
+1.14.1.polish pass through
 
 
 2.add static files as objects
@@ -30,7 +31,6 @@
 2.2.create a parent/child obj system
 2.3.replace rectangle colours with pdf images
 2.4.click to trigger actions(for stat obj) 
-
 3.create proper ui. finalize website layout
 4.create homepage
 5.create a simple contribution system for outsiders to contribute

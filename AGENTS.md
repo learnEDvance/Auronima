@@ -3,16 +3,17 @@
 A spatial/reactive learning interface, built as an **absolute primitive
 prototype** that grows feature by feature. Two files rule this project:
 
-- `prototype.txt` — the spec: what the viewer must do (rects, lines,
+- `larps/prototype.txt` — the spec: what the viewer must do (rects, lines,
   expand/collapse, exploration map, ...).
 - `estemsched` — the **single source of truth**: the exact order to build it
   in, one item at a time. It outranks every other file — if code, README,
   plans, or these instructions disagree with it, `estemsched` wins. Re-read it
   before any work; only the owner edits it.
 
-Work strictly top-down from `prototype.txt` and `estemsched`. Bigger vision
-docs live in `info/` and are **off-limits until the owner says otherwise** —
-they distract from the prototype job.
+Work strictly top-down from `larps/prototype.txt` and `estemsched`. The other
+vision docs live in `larps/` and are **off-limits until the owner says
+otherwise** — they distract from the prototype job. (`larps/prototype.txt` is
+the exception: it's the spec, so reading it is always allowed.)
 
 ## Stack & verification (no build/test/lint tooling)
 
@@ -49,6 +50,6 @@ they distract from the prototype job.
 
 - README and commit messages are informal (owner is new to GitHub); match the
   short, lowercase, plain style.
-- Filenames with spaces (`info/rendering engine1.txt`) need quotes in shell
+- Filenames with spaces (`larps/rendering engine1.txt`) need quotes in shell
   commands.
 - `.gitignore` only lists `.directory`.
