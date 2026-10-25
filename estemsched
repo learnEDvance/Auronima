@@ -5,12 +5,14 @@
 1.3.1.render loop(done)
 1.3.2.keebput(done)
 1.3.3.transformations(done)
-1.4.phase through effect(current)
-1.4.1.phase
-1.4.2.zoom
-1.4.3.remove grid
-
+1.4.phase through effect(on it)
+1.4.1.phase(done)
+1.4.2.remove grid(done)
 1.5.clickable rectangle
+1.5.1.click to get a console message
+1.5.2.click on a rectangle for it to send a console message
+1.5.3.click on a rectangle and get the mouse click position relative to the inside area of the rectangle.[to be able to click on paras of a page!]
+
 1.6.colour changing rectangle
 1.7.zoom feature
 1.8.multiple rectanlges
@@ -19,7 +21,7 @@
 1.11.threads(lines) connecting different rectangles
 1.12.threads close rectangles when they are clicked on.
 1.13.rectanlges triggering other rectangles by clickig on them(the actions can be color flash,expansion or collision)
-1.14.4.finish/polish,modularizing
+1.14.finish/polish,modularizing
 
 
 

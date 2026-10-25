@@ -23,13 +23,9 @@ camera.position.set(0, 0, 5); // 5u away from square in z
 //in x/y plane. at z=0, size=2*2
 const square = new THREE.Mesh(
   new THREE.PlaneGeometry(2, 2),
-  new THREE.MeshBasicMaterial({ color: 0x39ff14 }) //cyberpunk neon, hell yeah!
+  new THREE.MeshBasicMaterial({ color: 0x39ff14, transparent: true }) //cyberpunk neon, hell yeah!
 );
 scene.add(square);
-
-const grid = new THREE.GridHelper(100, 100, 0x3a4256, 0x22262f);
-grid.position.y = -2; //grid placed at y=-2
-scene.add(grid);
 
 //keebmap
 const keys = {
@@ -85,7 +81,10 @@ function draw() {
     camera.position.x += dx * SPEED * dt;
     camera.position.y += dy * SPEED * dt;
     camera.position.z += dz * SPEED * dt;
-
+    const d = camera.position.distanceTo(square.position);                            //dist to cam
+    const PASS_NEAR = 1, PASS_FAR = 2.0;                                            //fadein/out vars
+    const t = THREE.MathUtils.clamp((d - PASS_NEAR) / (PASS_FAR - PASS_NEAR), 0, 1);  //calc opacity
+    square.material.opacity = t;                                                      //set opacity on da square
     draw(); //draw the damn frame
 
     requestAnimationFrame(frame); //asks for current frame

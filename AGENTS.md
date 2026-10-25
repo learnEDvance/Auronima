@@ -5,8 +5,10 @@ prototype** that grows feature by feature. Two files rule this project:
 
 - `prototype.txt` — the spec: what the viewer must do (rects, lines,
   expand/collapse, exploration map, ...).
-- `estemsched` — the schedule: the exact order to build it in, one item at a
-  time.
+- `estemsched` — the **single source of truth**: the exact order to build it
+  in, one item at a time. It outranks every other file — if code, README,
+  plans, or these instructions disagree with it, `estemsched` wins. Re-read it
+  before any work; only the owner edits it.
 
 Work strictly top-down from `prototype.txt` and `estemsched`. Bigger vision
 docs live in `info/` and are **off-limits until the owner says otherwise** —
@@ -29,6 +31,8 @@ they distract from the prototype job.
 
 ## Hard rules
 
+- **`estemsched` is the source of truth for everything.** Check it before
+  starting any task; never contradict it, never edit it.
 - **Never** `git commit` or `git push`. Leave changes in the working tree.
 - **Never** run `node`/`npm`.
 - Implement each schedule item completely before moving on.
